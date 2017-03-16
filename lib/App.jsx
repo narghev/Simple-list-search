@@ -10,6 +10,14 @@ class App extends React.Component {
     }
     this.content = new Array();
   }
+  changeHandler = (event) => {
+    let result = [];
+    for (let i of Countries){
+      if (i.name.toLocaleLowerCase().search(event.target.value.toLocaleLowerCase()) >= 0)
+        result.push(i);
+    }
+    this.setState({ list: result });
+  }
   render(){
     this.content = [];
     for (let i=0; i < this.state.list.length; i++) {
@@ -24,10 +32,13 @@ class App extends React.Component {
       )
     }
     return (
-      <div className="list">
-        {
-          this.content
-        }
+      <div className="app">
+        <input type="text" onChange={ this.changeHandler }/>
+        <div className="list">
+          {
+            this.content
+          }
+        </div>
       </div>
     )
   }
