@@ -1,0 +1,39 @@
+{
+  "name": "country-list",
+  "version": "0.0.0",
+  "description": "Simple React Search list",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/narghev/Simple-list-search.git"
+  },
+  "author": "Narek Ghevandiani <n.ghevandiani@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/narghev/Simple-list-search/issues"
+  },
+  "homepage": "https://github.com/narghev/Simple-list-search#readme",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react",
+      "stage-2"
+    ]
+  }
+}
