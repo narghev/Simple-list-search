@@ -2,6 +2,7 @@
 
 ###To build the app.js file
 ```
+$ sass --watch ./sass/:./styles/
 $ npm install
 $ npm start
 ```

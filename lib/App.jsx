@@ -24,7 +24,8 @@ class App extends React.Component {
     });
     return (
       <div className="app">
-        <input type="text" onChange={ this.changeHandler }/>
+        <p>Filtered List</p>
+        <input type="text" onChange={ this.changeHandler } placeholder="Filter..."/>
         <div className="list">
           {
             renderCountries

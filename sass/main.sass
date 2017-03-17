@@ -1,0 +1,57 @@
+$textColor: rgb(100,100,100)
+$backgroundColor: rgb(240,240,240)
+$borderColor: rgb(200,200,200)
+
+*
+  margin: 0
+  padding: 0
+
+body
+  background-color: $backgroundColor
+
+#app
+  width: 100%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  .app
+    width: 35%
+    p
+      margin-top: 15vh
+      margin-bottom: 3vh
+      font-size: 250%
+      text-align: center
+      color: $textColor
+      font-family: sans-serif
+    input
+      width: 100%
+      margin-bottom: 5vh
+      padding: 5px
+      padding-right: 0
+      border: 1px solid $borderColor
+      border-radius: 2px
+      background-color: $backgroundColor
+      font-size: 100%
+      font-weight: 250
+    .list
+      width: 100%
+      height: 50vh
+      overflow-y: scroll
+      overflow-x: hidden
+      li
+        width: 100%
+        list-style-type: none
+        border-top: 1px
+        border-left: 1px
+        border-right: 1px
+        border-bottom: 0px
+        border-style: solid
+        border-color: $borderColor
+        background-color: white
+        font-size: 125%
+        font-weight: 250
+        padding: 5px
+        font-family: sans-serif
+        color: $textColor
