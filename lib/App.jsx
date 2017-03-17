@@ -6,37 +6,28 @@ class App extends React.Component {
   constructor(){
     super();
     this.state = {
-      list: Countries
+      search: ""
     }
-    this.content = new Array();
   }
   changeHandler = (event) => {
-    let result = [];
-    for (let i of Countries){
-      if (i.name.toLocaleLowerCase().search(event.target.value.toLocaleLowerCase()) >= 0)
-        result.push(i);
-    }
-    this.setState({ list: result });
+    const search = event.target.value.toLowerCase();
+    this.setState({ search });
   }
   render(){
-    this.content = [];
-    for (let i=0; i < this.state.list.length; i++) {
-      this.content.push(
-        <div className="country" key={ i }>
-          <span>
-            {
-              this.state.list[i].name
-            }
-          </span>
-        </div>
-      )
-    }
+    const renderCountries = Countries.map((currCountry, idx) => {
+      const { name, code } = JSON.parse(JSON.stringify(currCountry).toLowerCase());
+      const { search } = this.state;
+
+      if (name.includes(search) || code.includes(search)) {
+        return <li key={idx}>{currCountry.name}</li>
+      }
+    });
     return (
       <div className="app">
         <input type="text" onChange={ this.changeHandler }/>
         <div className="list">
           {
-            this.content
+            renderCountries
           }
         </div>
       </div>
